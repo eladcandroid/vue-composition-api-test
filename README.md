@@ -1,4 +1,4 @@
-# vue-functional
+# Vue Composition API Test
 
 Live: [https://enkot.github.io/vue-function-api-test/](https://enkot.github.io/vue-function-api-test/).
 

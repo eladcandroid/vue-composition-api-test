@@ -30,16 +30,16 @@
 
 <script>
 import {
-    value,
+    ref,
     watch,
     computed,
     onMounted,
     onUnmounted
-} from 'vue-function-api'
+} from '@vue/composition-api';
 import { fetchUserPosts } from '@/api'
 
 function useScroll() {
-    const pageOffset = value(0)
+    const pageOffset = ref(0)
     const update = () => {
         pageOffset.value = window.pageYOffset
     }
@@ -51,8 +51,8 @@ function useScroll() {
 }
 
 function useFetchPosts(props) {
-    const isLoading = value(false)
-    const posts = value([])
+    const isLoading = ref(false)
+    const posts = ref([])
 
     watch(
         () => props.id,
